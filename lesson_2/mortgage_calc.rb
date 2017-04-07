@@ -32,30 +32,30 @@ loop do
 end
 
 #get the annual apr
-r = ''
+rate = ''
 loop do 
 	prompt("Enter your interest rate in APR. Example .05 for 5%")
-	r = gets.chomp.to_f
-	break if valid_num(r)
+	rate = gets.chomp.to_f
+	break if valid_num(rate)
 	prompt("Doesn't look like that is a correct input")
 end
 
 #get the duration of the loan
-n = ''
+months = ''
 loop do 
 	prompt("How long is your loan in months")
-	n = gets.chomp.to_i
-	break if valid_num(n)
+	months = gets.chomp.to_i
+	break if valid_num(months)
 	prompt("Doesn't look like that is a correct input")
 end
 
 #convert APR to monthly interest rate
-m = ""
-def monthly_pmt(prin, r, n)
-	j = r.to_f / 12
-	m = prin.to_f * (j/(1 - (1 + j)**(-n)))
+pmt = ""
+def monthly_pmt(prin, rate, months)
+	j = rate.to_f / 12
+	pmt = prin.to_f * (j/(1 - (1 + j)**(-months)))
 end
 
-result = monthly_pmt(prin,r,n)
+result = monthly_pmt(prin,rate,months)
 #print result
 p "your monthly payment is $#{format('%02.2f', result)}"

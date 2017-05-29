@@ -1,7 +1,47 @@
 SQMETERS_TO_SQFT = 10.7639 # defining converstions and known numbers like pie as a constant is good practice.
 
-#when will i retire?
+#Mutation 
+#array2 is populated with object ids from array 1
+array1 = %w(Moe Larry Curly Shemp Harpo Chico Groucho Zeppo)
+array2 = []
+array1.each { |value| array2 << value }
+array1.each { |value| value.upcase! if value.start_with?('C', 'S') }
+puts array2
 
+
+# #>> Please enter an integer greater than 0:
+# 5
+# >> Enter 's' to compute the sum, 'p' to compute the product.
+# s
+# The sum of the integers between 1 and 5 is 15.
+
+p 'Please enter an integer greater than 0'
+num = gets.chomp.to_i
+p "Enter 's' to compute the sum, 'p' to compute the product"
+choice = gets.chomp.to_s.downcase
+
+def sum_array(num, choice)
+	total = 0
+	1.upto(num) {|x| total+=x}
+	total
+end
+
+def mult_array(num, choice)
+	total = 1
+	1.upto(num) {|x| total*=x}
+	total
+end
+
+return_value = 0
+if choice == 's'
+	return_value = sum_array(num, choice)
+else 
+	return_value = mult_array(num, choice)
+end
+
+p return_value
+
+#when will i retire?
 t = Time.new
 p 'What is your age'
 age = gets.chomp.to_i
@@ -37,4 +77,16 @@ p "The area of the room in square meters is '#{length_meters * width_meters}' an
 age_teddy = rand(20..200)
 p "Teddy is #{age_teddy} years old"
 
-#
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,36 +1,69 @@
-# p [1,2,3].first(2)
+class Customer
+  attr_reader :reader
 
-# ahash = { a: "ant", b: "bear", c: "cat" }
-
-# p ahash.first(2)
-# p ''
-
-
-# def joinor(array, character = ' ', word = 'or')
-#   len = array.size - 1
-#   case len
-#   when 0 then ''
-#   when 1 then array.first
-#   when 2 then array.join(" #{word} ")
-#   else
-#   	array[-1] = "#{word} #{array.last}" # joins the last element as one word
-#   	array.join(character)
-#   end
-# end
-
-# p joinor([1,2,3,4,5], '; ', 'and')
-
-
-#test variable scope
-
-def varscop(param)
-	param + "world"
-	param += " universe"
-	param << "galaxy"
+  def place_order
+    @order = Order.new
+  end
 end
 
-str = "string"
+class Order
+  def initialize
+    @burger = Burger.new
+    @side = Side.new
+    @drink = Drink.new
+  end
 
-varscop(str)
+  def meal
+    [@burger, @side, @drink]
+  end
 
-p str
+  def to_s
+    meal.map(&:to_s).join(', ')
+  end
+end
+
+class MealItem
+  def initialize
+    @option = choose_option
+  end
+
+  def choose_option
+    puts "Please choose a #{self.class} option:"
+    puts item_options # item_options returns a list of options and prices
+                      # for a particular item type
+    gets.chomp
+  end
+
+  def to_s
+    #return meal items by looking at Options constant
+    #first key is @option, :name
+  end
+end
+
+class Burger < MealItem
+  OPTIONS = {
+    '1' => { name: 'LS Burger', cost: 3.00 },
+    '2' => { name: 'LS Cheeseburger', cost: 3.50 },
+    '3' => { name: 'LS Chicken Burger', cost: 4.50 },
+    '4' => { name: 'LS Double Deluxe Burger', cost: 6.00 }
+  }
+end
+
+class Side < MealItem
+  OPTIONS = {
+    '1' => { name: 'Fries', cost: 0.99 },
+    '2' => { name: 'Onion Rings', cost: 1.50 }
+  }
+end
+
+class Drink < MealItem
+  OPTIONS = {
+    '1' => { name: 'Cola', cost: 1.50 },
+    '2' => { name: 'Lemonade', cost: 1.50 },
+    '3' => { name: 'Vanilla Shake', cost: 2.00 },
+    '4' => { name: 'Chocolate Shake', cost: 2.00 },
+    '5' => { name: 'Strawberry Shake', cost: 2.00 }
+  }
+end
+
+p Drink.ancestors

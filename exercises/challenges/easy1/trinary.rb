@@ -1,0 +1,77 @@
+
+class Trinary
+	INVALID = /[^0-2]/
+	attr_reader :number
+
+	def initialize(string)
+		@number = string
+	end
+
+	def to_decimal
+		number =~ INVALID ? 0 : calculate
+	end
+
+	private
+	def calculate
+		decimal = 0
+		number.chars.reverse.each_with_index do |value, index|
+			decimal += value.to_i*(3**index)
+		end
+		decimal
+	end
+end
+
+require 'minitest/autorun'
+require_relative 'Trinary'
+
+class TestTrinary < Minitest::Test
+	def test_trainary_1_is_decimal_1
+		assert_equal 1, Trinary.new('1').to_decimal
+	end
+
+	def test_trinary_2_is_decimal_2
+		assert_equal 2, Trinary.new('2').to_decimal
+	end
+
+	def test_trinary_10_is_decimal_3
+    # skip
+    assert_equal 3, Trinary.new('10').to_decimal
+  end
+
+  def test_trinary_11_is_decimal_4
+    # skip
+    assert_equal 4, Trinary.new('11').to_decimal
+  end
+
+  def test_trinary_100_is_decimal_9
+    # skip
+    assert_equal 9, Trinary.new('100').to_decimal
+  end
+
+  def test_trinary_112_is_decimal_14
+    # skip
+    assert_equal 14, Trinary.new('112').to_decimal
+  end
+
+  def test_trinary_222_is_26
+    # skip
+    assert_equal 26, Trinary.new('222').to_decimal
+  end
+
+  def test_trinary_1122000120_is_32091
+    # skip
+    assert_equal 32_091, Trinary.new('1122000120').to_decimal
+  end
+
+  def test_invalid_trinary_is_decimal_0
+    # skip
+    assert_equal 0, Trinary.new('carrot').to_decimal
+  end
+
+  def test_invalid_trinary_with_digits_is_decimal_0
+    # skip
+    assert_equal 0, Trinary.new('0a1b2c').to_decimal
+  end
+
+
+end

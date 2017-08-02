@@ -1,0 +1,43 @@
+
+notes on the concept .self
+
+#This code recurseivly calls title and leads to a systemstackerror (stackoverflow!)
+#why?
+#also this problem was correctly solved when the methods title and author returned instance variables to the object
+class Book
+	
+	def initialize(author,title)
+		@author = author
+		@title = title
+	end
+
+	def title
+		self.title
+	end
+
+	def author
+		self.author
+	end
+
+	def to_s
+		%{"#{@title}, by #{@author}"}
+	end
+end
+
+book = Book.new("The handmadians tail", "Margaret Atwood")
+puts %(The author of "#{book.title}" is #{book.author}.)
+puts %(book = #{book}.)
+
+
+Ex problem # 
+
+Further Exploration
+
+What do you think of this way of creating and initializing Book objects? 
+(The two steps are separate.) Would it be better to create and initialize 
+at the same time like in the previous exercise? What potential problems, 
+if any, are introduced by separating the steps?
+
+
+Review the following example: Particularly using .self instead of the instance variable
+Easy 1Buggy Code - Car Mileage

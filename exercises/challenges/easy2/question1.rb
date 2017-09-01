@@ -19,3 +19,7 @@ def output_bonus(string)
 	word_index = 0
 	while(count < length)
 		while(string[count] == ' ')
+			count+= 1
+		end
+		if word_index
+		word_index +=

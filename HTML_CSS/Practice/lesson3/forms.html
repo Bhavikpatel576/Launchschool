@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Form</title>
+      <style>
+        label {
+          color: blue;
+        }
+      </style>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <form action= "#" method ="get">
+      <fieldset>
+        <label for="name">Search for</label>
+        <input type="search" id="search" name="search">
+        <input type="radio" id="tv" name="tv">
+        <label for="tv">TV</label>
+        <input type="radio" id="movie" name="movie">
+        <label for="movie">Movie</label>
+        <input type="radio" id="music" name="music">
+        <label for="music">Music</label>
+      </fieldset>
+    </form>
+    <form action= "#" method="post">
+      <fieldset>
+      <dl>
+        <dt></dt>
+        <dd><input type="text" id="name" name="your name" required></dd>
+        <dt> <label for="name">Email</label> </dt>
+        <dd><input type="text" id="email" name="email" required></dd>
+        <dt><label for="name">Number</label> </dt>
+        <dd><input type="tel" id="phone" name="phone" placeholder="###-###-####" required></dd>
+        <dt><label for="name">Message</label> </dt>
+        <dd><textarea rows="6" cols="80" name="message" id="message" required> Type your message here </textarea></dd>
+      </dl>
+      <p> <button type="submit">Send Message</button> <button type='delete'>Clear</button></p>
+      </fieldset>
+    </form>
+   
+    <form action="#" method="post">
+      <fieldset style="border:none">
+        <dl>
+          <dt><label for="movie">Movie</label></dt>
+          <dd>
+          <select name="Movie" id="title" size="4">
+            <option value="Alien" selected>Alien</option>
+            <option value="looper" selected>Looper</option>
+            <option value="frozen">Frozen</option>
+            <option value="Tommy Boy">Tommy Boy</option>
+          </select>
+          </dd>
+          <dt><label for="Rating">Rating</label><dt>
+          <dd><input type="range" min="1" max="5" value="1"></dd>
+        </dl>
+          <div>
+            <input type="checkbox" id="checkBox" name="favorite">
+            <label for="favorite">Add to my favorites</label>
+          </div>
+          <button type="submit" id="movie" name="movie">Rate Movie</button>
+      </fieldset>
+  </body>
+</html> 

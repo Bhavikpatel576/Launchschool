@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+<style>
+  table {
+    background-color: cyan;
+    border-collapse: collapse;
+  }
+  
+  .table-color {
+    background-color: orange;
+  }
+  .highlight {
+    background-color: yellow;
+  }
+
+  th[scope='col']{
+    background-color: blue;
+  }
+  th[scope='row']{
+    background-color: green;
+  }
+
+  th, td{
+    padding: 5px;
+    border: 1px solid black;
+  }
+</style>
+  </head>
+  <body>
+    <table>
+       <thead>
+        <tr>
+          <th>Product</th>
+          <th>Quanity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-color">
+          <td>Apple</td>
+          <td>34</td>
+          <td>$3.99/lb</td>
+        </tr>
+        <tr class="highlight">
+          <td>Banana</td>
+          <td>16</td>
+          <td>$1.69/lb</td>
+        </tr>
+        <tr class="table-color">
+          <td>Carrot</td>
+          <td>42</td>
+          <td>$2.49/lb</td>
+        </tr>
+        <tr class="highlight">
+          <td>Kiwi</td>
+          <td>18</td>
+          <td>$0.69 ea</td>
+        </tr>
+      </tbody>
+    </table>
+    <br></br>
+    <table>
+       <thead>
+        <tr>
+          <th scope='col'>Name</th>
+          <th scope='col'>Major</th>
+          <th scope='col'>GPA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope='row'>Chris Lee</th>
+          <td>Supply Chain Manager</td>
+          <td>3.7</td>
+        </tr>
+        <tr>
+          <th scope='row'>Shane Railey</th>
+          <td>PhotoJournalism</td>
+          <td>3.8</td>
+        </tr>
+        <tr>
+          <th scope='row'>Kevin Wang</th>
+          <td>Computer Science</td>
+          <td>4.0</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <br></br>
+    <table>
+       <thead>
+        <tr>
+          <th scope='col'>Type</th>
+          <th scope='col'>Name</th>
+          <th scope='col'>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope='row' rowspan='3'>Red</th>
+          <td>Memoire Pinot Noir</td>
+          <td>$17.99</td>
+        </tr>
+        <tr>
+          <td>Radius Cab</td>
+          <td>$9.99</td>
+        </tr>
+        <tr>
+          <td>Apothic Red</td>
+          <td>$19.99</td>
+        </tr>
+
+        <tr>
+          <th scope='row' rowspan='3'>White</th>
+          <td>kendall Jackson</td>
+          <td>$1.99</td>
+        </tr>
+        <tr>
+          <td>Bhavs White wine</td>
+          <td>Free</td>
+        </tr>
+        <tr>
+          <td>Trader Joes W</td>
+          <td> 2 buck chuck </td>
+        </tr>
+        <tr>
+          <th scope='row' rowspan='3'>Sake</th>
+          <td>Sukas</td>
+          <td>34.99</td>
+        </tr>
+        <tr>
+          <td>Naruto</td>
+          <td>4.99</td>
+        </tr>
+        <tr>
+          <td>Soup</td>
+          <td>23.33</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </body>
+</html> 

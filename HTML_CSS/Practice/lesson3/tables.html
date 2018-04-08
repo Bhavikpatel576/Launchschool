@@ -9,23 +9,32 @@
     border-collapse: collapse;
   }
   
-  .table-color {
+  /* .table-color {
     background-color: orange;
   }
   .highlight {
     background-color: yellow;
+  } */
+
+  tr:nth-child(2n+1) {
+    background-color: orange;
   }
 
-  th[scope='col']{
+  tr:nth-child(2n+2) {
+    background-color: yellow;
+  }
+
+  th{
     background-color: blue;
   }
-  th[scope='row']{
+
+  [scope="row"]{
     background-color: green;
   }
 
   th, td{
     padding: 5px;
-    border: 1px solid black;
+    border: 1px solid grey;
   }
 </style>
   </head>

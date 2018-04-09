@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <style>
+        body, section, article, aside {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: grey;
+        }
+        section {
+            max-width: 1000px;
+            background: white;
+            margin: 0 auto;
+            float: none;
+            
+            /* what is this doing? Well since we are using floats, the browser removes those items
+             from the document workflow. The container no longer contains the floated items. The browswer
+             cannot determine the containers height. To prevent a floated item to overwrite other content we 
+             use a clearfix
+            */
+            /* overflow:hidden; */
+        }
+        article, aside {
+            box-sizing: border-box;
+            float: left;
+            padding: 1em;
+        }
+        article {
+            background:green;
+            box-sizing: border-box;
+            padding-right: 30px;
+            /* width: 500px; */
+            width: 70%;
+        }
+        aside {
+            background: yellow;
+            float: none;
+            overflow: hidden;
+            /* width: 250px; */
+        }
+        footer {
+            background: aqua;
+            clear: both;
+            padding: 1rem;
+        }
+    </style>
+  </head>
+  <body>
+      <section>
+          <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat sem sit amet ipsum varius commodo. Nunc tincidunt elementum risus consequat scelerisque. Vestibulum in tortor lacus. Nulla neque ligula, porttitor ut pretium scelerisque, tempor vel tortor. Pellentesque porta urna laoreet turpis mollis aliquam. Sed volutpat malesuada enim rutrum ultrices. Maecenas ut posuere metus. Mauris eu finibus elit, et euismod dolor. Etiam aliquet tincidunt ipsum. Mauris sit amet maximus nisl. Morbi facilisis eget eros quis rutrum. Vivamus lacus libero, faucibus bibendum erat ut, egestas finibus mi.</p> 
+            <p>In hac habitasse platea dictumst. Donec nulla quam, viverra eu vehicula non, ultrices et quam. Sed interdum cursus turpis nec aliquam. In dictum magna lacus. Integer tincidunt risus et blandit rhoncus. Nam sit amet imperdiet orci. Proin elementum a leo non viverra.</p>    
+            <p>Nam ut augue faucibus, viverra ante placerat, convallis orci. Vestibulum ornare consectetur velit, a efficitur eros fringilla ut. Sed posuere dolor massa, hendrerit mollis arcu egestas at. Nulla a tristique felis, at varius ante. Praesent nunc lacus, finibus aliquet elit eget, euismod congue felis. Etiam rhoncus, mauris eu interdum malesuada, mi tellus imperdiet lorem, eget sollicitudin nunc massa at augue. Vestibulum vel pellentesque arcu.</p>
+            <p>Nam ut augue faucibus, viverra ante placerat, convallis orci. Vestibulum ornare consectetur velit, a efficitur eros fringilla ut. Sed posuere dolor massa, hendrerit mollis arcu egestas at. Nulla a tristique felis, at varius ante. Praesent nunc lacus, finibus aliquet elit eget, euismod congue felis. Etiam rhoncus, mauris eu interdum malesuada, mi tellus imperdiet lorem, eget sollicitudin nunc massa at augue. Vestibulum vel pellentesque arcu.</p>
+            <p>Quisque fermentum ligula vitae laoreet tincidunt. Nam luctus fringilla porta. Aliquam erat volutpat. Sed molestie non nisi tempus aliquam. Nulla nec neque id lacus fringilla convallis. Vivamus gravida at lectus quis malesuada. Integer pretium eros eget libero fringilla luctus. Sed cursus leo ut venenatis varius. Proin vitae est vel augue auctor accumsan.</p>
+            <p>Mauris id malesuada quam. Donec imperdiet arcu ut risus mollis, quis congue tortor fermentum. Maecenas pretium purus ut vehicula scelerisque. Donec finibus nulla non metus imperdiet, id vulputate lectus dapibus. Sed eget ipsum dolor. Nulla eget tincidunt massa, ac sodales ex. Proin at pulvinar dui. Quisque sed sem non massa laoreet condimentum. Mauris sed lectus eu dui tristique tempor. Integer iaculis et dui sed tristique. Nunc hendrerit ipsum vel nibh ornare tristique. Quisque faucibus euismod turpis, elementum maximus mi. Nulla efficitur justo sapien, ultricies interdum ipsum tincidunt ac. Donec a ligula ut enim tincidunt elementum.</p>
+          </article>
+
+          <aside>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies facilisis ante, a placerat turpis vehicula nec. Donec elementum euismod tempus. Nam in sapien lacinia, venenatis arcu a, blandit lorem. Etiam vestibulum commodo sapien, eu vestibulum nulla interdum sed. In porttitor nibh ex, tincidunt luctus lectus condimentum nec. Nunc ornare leo nec velit sodales sagittis. Maecenas a nunc nec mauris imperdiet scelerisque id id dolor. Aliquam sodales lectus vitae blandit ornare. Vestibulum dignissim odio lacus. </p>
+            <p>Fusce facilisis eget est quis luctus. Donec accumsan, magna et blandit lobortis, velit arcu pellentesque orci, quis volutpat velit nunc at neque. Duis lobortis est orci, at ultricies mi hendrerit et. Donec velit tortor, tincidunt nec luctus sed, sollicitudin a ante. Sed pellentesque turpis fermentum, aliquam erat et, suscipit diam. Morbi sit amet felis sed orci maximus luctus. Suspendisse id condimentum sapien. Maecenas iaculis sem mi, ut ornare urna accumsan egestas. Morbi aliquet ligula sed nunc tincidunt rhoncus. Quisque tortor enim, aliquet in venenatis id, gravida eu velit. Integer varius quam vel mi dictum, vehicula bibendum purus hendrerit.</p>
+          </aside>
+          <footer>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies facilisis ante, a placerat turpis vehicula nec. Donec elementum euismod tempus. Nam in sapien lacinia, venenatis arcu a, blandit lorem. Etiam vestibulum commodo sapien, eu vestibulum nulla interdum sed. In porttitor nibh ex, tincidunt luctus lectus condimentum nec. Nunc ornare leo nec velit sodales sagittis. Maecenas a nunc nec mauris imperdiet scelerisque id id dolor. Aliquam sodales lectus vitae blandit ornare. Vestibulum dignissim odio lacus. </p>
+                <p>Fusce facilisis eget est quis luctus. Donec accumsan, magna et blandit lobortis, velit arcu pellentesque orci, quis volutpat velit nunc at neque. Duis lobortis est orci, at ultricies mi hendrerit et. Donec velit tortor, tincidunt nec luctus sed, sollicitudin a ante. Sed pellentesque turpis fermentum, aliquam erat et, suscipit diam. Morbi sit amet felis sed orci maximus luctus. Suspendisse id condimentum sapien. Maecenas iaculis sem mi, ut ornare urna accumsan egestas. Morbi aliquet ligula sed nunc tincidunt rhoncus. Quis </p>
+          </footer>
+      </section>
+
+  </body>
+</html> 
+

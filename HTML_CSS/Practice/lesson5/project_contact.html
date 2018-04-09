@@ -8,18 +8,27 @@
     <body>
         <form action="" method="post">
                 <fieldset>
-                    <dl>
+                    <dl class="partial one_half left">
                         <dt><label for='first_name'>First Name</label></dt>
                         <dd><input type='text' name='first_name' id='first_name' placeholder="first name"></dd>
-    
+                    </dl><!--
+                --><dl class="partial one_half right">
                         <dt><label for='last_name'>Last Name</label></dt>
                         <dd><input type='text' name='last_name' id='last_name' placeholder="last name"></dd>
+                    </dl>
+                    <dl>
                         <dt><label for='email'>Email</label></dt>
                         <dd><input type='email' name='email' id='email' placeholder="E-mail"></dd>
-                        <dt><label for='address'>address</label></dt>
+                    </dl>
+                    <dl>
+                        <dt><label for='address'>Address</label></dt>
                         <dd><input type='text' name='address' id='address' placeholder="1343 jason st">    </dd>
-                        <dt><label for='city'>city</label></dt>
+                    </dl>
+                    <dl class="partial one_half left">
+                        <dt><label for='city'>City</label></dt>
                         <dd><input type='text' name='city' id='city' placeholder="Jersey City"></dd>
+                    </dl><!--
+                    --><dl class="partial one_tenth both">
                         <dt><label for='state'>state</label></dt>                    
                         <dd>
                                 <select name="state" id="state">
@@ -76,9 +85,11 @@
                                 <option>WY</option>
                                 </select>
                         </dd>
-                    
+                    </dl><!--
+                    --><dl class="partial four_tenth right">
                         <dt><label for='zipcode'>Zipcode</label></dt>
                         <dd><input type='number' name='zipcode' id='zipcode' placeholder="77069"></dd>
+                    </dl>
                 </dl>
                         <p>Which of these colors do you prefer the most?</p>
                         <ul>

@@ -1,0 +1,80 @@
+body {
+    background-image: url("../design_files/company_splash_page/company_splash_page/bg_body.gif");
+}
+
+header {
+    display: block;
+    padding-top: 150px;
+}
+
+header h1{
+    color: white;
+    background: transparent url("../design_files/company_splash_page/company_splash_page/logo.png") 0 0 no-repeat;
+    font-size: 36px;
+    padding: 150px 0 150px 0;
+    margin: 0 auto;
+    width: 300px;
+}
+
+main {
+    height: 830px;
+    width: 1000px;
+    background: #ffffff;
+    margin: 0 auto;
+}
+
+section {
+    text-align: center;
+    color:  #45494d;
+    font-family: Avenir;
+    padding: 50px 20px;
+}
+
+section h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+section h3 {
+    color: #3e98b2;
+}
+
+section p {
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 0 112px;
+}
+
+footer {
+    padding: 0 0 0 0;
+    height: 118px;
+    width: 1000px;
+    background: #e7e7e7;
+    margin: 0 auto;
+    margin-bottom: 142px;
+}
+
+i.material-icon-twitter{
+    background: url("../design_files/company_splash_page/company_splash_page/icon_twitter.png") no-repeat;
+    padding: 30px;
+}
+
+i.material-icon-facebook{
+    background: url("../design_files/company_splash_page/company_splash_page/icon_facebook.png") no-repeat;
+    padding: 30px;
+}
+
+i.material-icon-email{
+    background: url("../design_files/company_splash_page/company_splash_page/icon_email.png") no-repeat;
+    padding: 30px;
+}
+
+.container {
+    width: 400px;
+    padding-top: 59px;
+    margin: 0 auto;
+}
+
+.container a {
+    padding: 25px;
+}

@@ -49,6 +49,40 @@
             li img {
                 border: 3px solid white;
             }
+
+            @media (max-width: 899px) { 
+                li {
+                    width: 33%;
+                }
+             }
+
+            @media (max-width: 599px) { 
+                li {
+                    width: 50%;
+                }
+             }
+
+            @media (min-width: 1280px) { 
+                li {
+                    width: 50%;
+                }
+                main {
+                    max-width: 100%;
+                }
+                figure {
+                    display: inline-block;
+                    float: left;
+                    margin-right: 50px;
+                    width: 950px;
+                    vertical-align: top;
+                }
+                ul {
+                    overflow: hidden;
+                }
+                li {
+                    width: 100%;
+                }
+             }
         </style>
     </head>
     <body>

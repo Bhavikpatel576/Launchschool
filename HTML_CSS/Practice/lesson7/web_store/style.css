@@ -51,13 +51,14 @@ main {
 }
 
 .product-card {
+  display:flex;
   width: 200px;
   height: 238px;
   background:white;
   margin-right: 18px;
   margin-bottom: 18px;
-  display:flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 .product-card:nth-child(4n+1) {
@@ -72,6 +73,10 @@ main {
   display: flex;
 }
 
+.control {
+  padding-bottom: 16px;
+}
+
 img {
   width: auto;
   height: 140px;
@@ -81,6 +86,7 @@ img {
 .product-info h5 {
   font-size: 19px;
   padding: 0 0 5px;
+  flex-grow: inherit;
 }
 
 .product-info h6 {
@@ -90,10 +96,8 @@ img {
 
 input[type="checkbox"] { display:none; }
 
+
 input:checked + .product-image img{
-  /* display: block;
-  padding: 500px;
-  box-sizing: content-box; */
   top: 100px;
   left: 50%;
   padding-top: 0;
@@ -112,6 +116,6 @@ input:checked + .product-image:before{
   left: 0;
   bottom: 0;
   content: "";
-	background-color: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }

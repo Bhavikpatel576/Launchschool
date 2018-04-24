@@ -286,6 +286,28 @@ section h1.section-heading{
 
  /* --------------Sponsors------------------- */
 
+ .sponsor-grid {
+  display: grid;
+  width: 100%;
+  }
+
  .sponsor-platinum {
-   grid-auto-flow: row;
+   display: grid;
+   grid-template-columns: 33% 33% 33%;
  }
+
+ .sponsor-gold{
+   display:grid;
+   grid-template-columns: 30% 30%;
+ }
+
+ .sponsor-silver {
+   display:grid;
+   grid-template-columns: 1fr 1fr 1fr;
+ }
+
+ .sponsor-support {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+ }
+

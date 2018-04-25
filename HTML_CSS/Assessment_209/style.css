@@ -102,14 +102,37 @@ section li {
     padding: 17px;
 }
 
+.list-count {
+    border-radius: 50%;
+    background: #6b7292;
+    text-align: center;
+    height: 16px;
+    width: auto;
+    padding: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
 
 
 
 /* -----------main ----------------------- */
 
 main .heading {
-    padding-top: 36px;
+    display: flex;
+    align-items: center;
+    padding-top: 34px;
     padding-left: 12px;
+    padding-right: 20px;
+}
+
+main .heading .list-count {
+    background: #148fd5;
+    color: white;
+}
+
+.heading time {
+    padding-right: 20px;
 }
 
 main section[id="todo-list"] {
@@ -139,3 +162,35 @@ section li label {
 section time {
     flex:2;
 }
+
+/* main checkbox */
+.fancy-checkbox {
+    flex:0;
+}
+
+.fancycheckbox {
+    background: url("images/ticked-box.png") 0 0 no-repeat;
+    height: 14px;
+    width: 14px;
+}
+
+.fancyuncheckbox {
+    background: url("images/unticked-box.png") 0 0 no-repeat;
+    height: 14px;
+    width: 14px;
+    display:inline-block;
+}
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .fancycheckbox
+{
+    display: inline-block;
+}
+ 
+input[type="checkbox"]:checked ~ .fancyuncheckbox
+{
+    display: none;
+}
+

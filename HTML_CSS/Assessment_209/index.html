@@ -78,21 +78,23 @@
                         <form action="#" method="post">
                             <fieldset>
                                 <dl class="title">
-                                    <dt><label for='title'>Title</label></dt>
-                                    <dd><input type='text' name='tile' id='title' placeholder="item2"></dd>
-                                </dl><!--
-                            --><dl class="date">
-                                    <dt><label for='day'>Day</label></dt>
+                                    <dt><label for='title'>Title</label></dt><!--
+                                    --><dd><input type='text' name='tile' id='title' placeholder="Item 2"></dd>
+                                </dl>
+                                <dl class="date">
+                                <dt><label for='day'>Due Date</label></dt>
                                     <dd>
                                         <select name="day" id="day">
-                                            <option value="" disabled selected>Day</option>
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3</option>
+                                            <option selected>16</option>
                                         </select>
+                                        <span class="up-arrow day-arrow"></span>
+                                        <span class="down-arrow day-arrow"></span>
                                     </dd>
-                                <dt><label for='month'></label></dt>
                                     <dd>/</dd>
+                                <dt><label for='month'></label></dt>
                                     <dd>
                                         <select name="month" id="month">
                                             <option value="" disabled selected>Month</option>
@@ -109,9 +111,11 @@
                                             <option>11</option>
                                             <option>12</option>
                                         </select>
+                                        <span class="up-arrow month-arrow"></span>
+                                        <span class="down-arrow month-arrow"></span>
                                     </dd>
-                                <dt></dt>
                                     <dd>/</dd>
+                                <dt></dt>
                                     <dd>
                                         <select name="year-date" id="year-date">
                                             <option value="" disabled selected>Year</option>
@@ -119,15 +123,17 @@
                                             <option>2012</option>
                                             <option>2013</option>
                                         </select>
+                                        <span class="up-arrow year-arrow"></span>
+                                        <span class="down-arrow year-arrow"></span>
                                     </dd>
                                 </dl>
                                 <dl class="comments">
                                     <dt><label for="comments">Description</label></dt>
-                                    <dd><textarea rows="8" cols=60 name="comments" id="comments" placeholder="Description"></textarea></dd>
+                                    <dd><textarea name="comments" id="comments" placeholder="Description"></textarea></dd>
                                 </dl>
                                 <div class="controls">
-                                    <input type="submit" value="save">
-                                    <input type="submit" value="mark as save">
+                                    <input type="submit" value="Save">
+                                    <input type="submit" value="Mark As Complete">
                                 </div>
                             </fieldset>
                         </form>

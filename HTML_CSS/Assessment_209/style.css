@@ -164,7 +164,7 @@ main .heading {
     display: flex;
     align-items: center;
     padding-top: 77px;
-    padding-left: 12px;
+    padding-left: 32px;
     padding-right: 20px;
 }
 
@@ -213,7 +213,7 @@ section li input {
     flex: 0;
 }
 
-section li label {
+section li > label {
     flex: 1;
     padding-left: 30px;
 }
@@ -252,7 +252,7 @@ button{
 }
 
 #todo-list > ol li.checked label{
-    color: #bebebe;
+    color: #b3b3b3;
     text-decoration: line-through;
 }
 
@@ -266,8 +266,8 @@ input[type="checkbox"] {
 
 /* ------- modal -----------*/
 
-dl {
-    padding: 13px;
+fieldset dl {
+    padding: 0px 13px 24px 32px;
 }
 
 dd input {
@@ -280,13 +280,37 @@ dd input {
 }
 
 .title dt {
-    padding-right: 78px;
+    padding-right: 80px;
 }
 
 .title dd input{
     width: 394px;
     height: 36px;
 }
+
+.up-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 4px 4px 4px;
+    border-color: transparent transparent #2c2c2c transparent;
+    position: absolute;
+    top: 107px;
+  }
+  
+.down-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    border-color: #2c2c2c transparent transparent transparent;
+    position: absolute;
+    top: 116px;
+}
+
+.day-arrow { left: 240px; }
+.month-arrow { left: 375px; }
+.year-arrow { left: 515px; }
 
 .date {
     display: flex;
@@ -295,26 +319,43 @@ dd input {
 }
 
 .date > dt:first-child {
-    padding-right: 128px;
+    width: 70px;
+    margin-right: 41px;
 }
 
 .date dd + dd{
     padding-left:10px;
 }
 
-.date dd > input {
-    width: 116px;
-    height: 36px;
+form > fieldset *{
+    font-size:16px;
+    box-sizing: border-box;
 }
 
-.date dd > select {
+dl.title dd > input[type="text"], dl.comments dd textarea{
+    padding: 5px 5px;
+    resize:none;
+}
+
+dl.title dd > input[type="text"]::placeholder {
+    color: black;
+}
+
+dl.date dd > select {
     color: #c6c6c6;
     background: white;
     -webkit-appearance: none;
     -webkit-border-radius: 0px;
-    padding:5px 3px;
-    width: 115px;
+    width: 114px;
     height: 36px;
+    padding:5px 5px;
+}
+
+dl.date dd > select[id="day"] {
+    color: black;
+}
+dl.date > dt{
+    width: 10px;
 }
 
 .date dt {
@@ -326,16 +367,24 @@ dd input {
 }
 
 .comments dt {
-    padding-right: 27px;
+    padding-right: 30px;
 }
 
 .comments textarea{
-    width: 396px;
+    width: 394px;
     height: 143px;
 }
 
 .controls {
-    padding-left: 128px;
+    padding-left: 143px;
+}
+
+.controls input[type="submit"]{
+    font-weight: 100;
+}
+
+.controls input[value="Save"]{
+    margin-right: 18px;
 }
 
 form input[type="submit"] {
@@ -343,8 +392,8 @@ form input[type="submit"] {
   color: #ffffff;
   border: none;
   border-radius: 5px;
-  width: 190px;
-  height: 35px;
+  width: 185px;
+  height: 36px;
   font-size: 18px;
 }
 
@@ -369,7 +418,7 @@ input[type=checkbox]:checked ~ #modal-container:before {
     right:0;
     z-index: 1;
     content:"";
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 #modal-container form{
@@ -378,6 +427,7 @@ input[type=checkbox]:checked ~ #modal-container:before {
 }
   
 fieldset {
+    box-sizing: border-box;
     display: flex;
     background: rgb(255, 255, 255);
     padding: 38px 0px 41px 0px;
@@ -395,13 +445,17 @@ fieldset {
     }
 
     #label-toggle {
-        background: url("images/hamburger.png") 0 0 no-repeat;
+        background-image: url("images/hamburger.png");
+        background-repeat: no-repeat;
         cursor: pointer;
         display: block;
         padding-top: 50px;
-        height: 50px;
+        height: 25px;
         margin-top: 1em;
-        width: 50px;
+        width: 25px;
+        position: absolute;
+        left: 32px;
+        background-size: contain;
     }
 
     #menu-toggle:checked ~ nav{
@@ -411,6 +465,6 @@ fieldset {
     #menu-toggle:checked ~ #label-toggle {
         position: absolute;
         top: 10px;
-        left: 386px;
+        left: 360px;
     }
 }

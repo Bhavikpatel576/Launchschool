@@ -10,10 +10,10 @@
         <label for="menu-toggle" id="label-toggle"></label>
         <nav>
             <section id="all-todos">
-                <div class="heading">
+                <header class="heading">
                     <h2>All Todos</h2>
                     <div class="list-count">18</div>
-                </div>
+                </header>
                 <ol>
                     <li class="selected">
                         <time datetime= "2016-02" class="date">02/16</time>                        
@@ -35,7 +35,7 @@
                         <time datetime= "2016-06" class="date">06/16</time>                        
                         <div class="list-count">6</div>
                     </li>
-                </ol>
+                </ol> 
             </section>
             <section id="completed">
                 <h2>Completed</h2>
@@ -64,134 +64,134 @@
                 <div class="list-count">8</div>
             </div>
             <section id="todo-list">
-            <h2>
-                <a href="#" class="add">
-                    <img id="plus" src="images/img_plus.png" alt="Add Todo">
-                    Add new to do
-                </a>
-            </h2>
-            <ol>
-                <li class="unchecked">
-                    <label for="modal-toggle">Item1</label>
-                    <input type="checkbox" id="modal-toggle">
-                    <div id="modal-container">
-                        <form action="#" method="post">
-                            <fieldset>
-                                <dl class="title">
-                                    <dt><label for='title'>Title</label></dt><!--
-                                    --><dd><input type='text' name='tile' id='title' placeholder="Item 2"></dd>
-                                </dl>
-                                <dl class="date">
-                                <dt><label for='day'>Due Date</label></dt>
-                                    <dd>
-                                        <select name="day" id="day">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option selected>16</option>
-                                        </select>
-                                        <span class="up-arrow day-arrow"></span>
-                                        <span class="down-arrow day-arrow"></span>
-                                    </dd>
-                                    <dd>/</dd>
-                                <dt><label for='month'></label></dt>
-                                    <dd>
-                                        <select name="month" id="month">
-                                            <option value="" disabled selected>Month</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8</option>
-                                            <option>9</option>
-                                            <option>10</option>
-                                            <option>11</option>
-                                            <option>12</option>
-                                        </select>
-                                        <span class="up-arrow month-arrow"></span>
-                                        <span class="down-arrow month-arrow"></span>
-                                    </dd>
-                                    <dd>/</dd>
-                                <dt></dt>
-                                    <dd>
-                                        <select name="year-date" id="year-date">
-                                            <option value="" disabled selected>Year</option>
-                                            <option>2011</option>
-                                            <option>2012</option>
-                                            <option>2013</option>
-                                        </select>
-                                        <span class="up-arrow year-arrow"></span>
-                                        <span class="down-arrow year-arrow"></span>
-                                    </dd>
-                                </dl>
-                                <dl class="comments">
-                                    <dt><label for="comments">Description</label></dt>
-                                    <dd><textarea name="comments" id="comments" placeholder="Description"></textarea></dd>
-                                </dl>
-                                <div class="controls">
-                                    <input type="submit" value="Save">
-                                    <input type="submit" value="Mark As Complete">
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                    <form action="destory" method="post" class="delete">
-                        <button type="submit"></button>
-                    </form>
-                </li>
-                <li class="unchecked">
-                    <label>Item2</label>
-                    <form action="destory" method="post" class="delete">
-                        <button type="submit"></button>
-                    </form>
-                </li>
-                <li class="checked">
-                    <label>Item3</label>
-                    <form action="destory" method="post" class="delete">
-                        <button type="submit"></button>
-                    </form>
-                </li>
-                <li class="checked">                
-                    <label>Item4</label>
+                <h2>
+                    <a href="#" class="add">
+                        <img id="plus" src="images/img_plus.png" alt="Add Todo">
+                        Add new to do
+                    </a>
+                </h2>
+                <ol>
+                    <li class="unchecked">
+                        <label for="modal-toggle">Item1</label>
                         <form action="destory" method="post" class="delete">
                             <button type="submit"></button>
                         </form>
-                </li>
-                <li class="checked">
-                    <label>Item5</label>
-                      <form action="destory" method="post" class="delete">
-                        <button type="submit"></button>
+                    </li>
+                    <li class="unchecked">
+                        <label>Item2</label>
+                        <form action="destory" method="post" class="delete">
+                            <button type="submit"></button>
+                        </form>
+                    </li>
+                    <li class="checked">
+                        <label>Item3</label>
+                        <form action="destory" method="post" class="delete">
+                            <button type="submit"></button>
+                        </form>
+                    </li>
+                    <li class="checked">                
+                        <label>Item4</label>
+                        <form action="destory" method="post" class="delete">
+                            <button type="submit"></button>
+                        </form>
+                    </li>
+                    <li class="checked">
+                        <label>Item5</label>
+                        <form action="destory" method="post" class="delete">
+                            <button type="submit"></button>
+                        </form>
+                    </li>
+                    <li class="unchecked">
+                        <label>Item6</label>
+                        <form action="destory" method="post" class="delete">
+                            <button type="submit"></button>
+                        </form>
+                    </li>
+                    <li class="unchecked">
+                        <label>Item7</label>
+                        <form action="destory" method="post" class="delete">
+                            <button type="submit"></button>
+                        </form>
+                    </li>
+                    <li class="unchecked">
+                        <label>Item8</label>
+                        <form action="destory" method="post" class="delete">
+                            <button type="submit"></button>
+                        </form>
+                    </li>
+                    <li class="unchecked">
+                        <label>Item9</label>
+                        <form action="destory" method="post" class="delete">
+                            <button type="submit"></button>
+                        </form>
+                    </li>
+                </ol>
+                <input type="checkbox" id="modal-toggle">
+                <div id="modal-container">
+                    <form action="#" method="post">
+                        <fieldset>
+                            <dl class="title">
+                                <dt><label for='title'>Title</label></dt><!--
+                                --><dd><input type='text' name='tile' id='title' placeholder="Item 2"></dd>
+                            </dl>
+                            <dl class="date">
+                            <dt><label for='day'>Due Date</label></dt>
+                                <dd>
+                                    <select name="day" id="day">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option selected>16</option>
+                                    </select>
+                                    <span class="up-arrow day-arrow"></span>
+                                    <span class="down-arrow day-arrow"></span>
+                                </dd>
+                                <dd>/</dd>
+                            <dt><label for='month'></label></dt>
+                                <dd>
+                                    <select name="month" id="month">
+                                        <option value="" disabled selected>Month</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                    <span class="up-arrow month-arrow"></span>
+                                    <span class="down-arrow month-arrow"></span>
+                                </dd>
+                                <dd>/</dd>
+                            <dt></dt>
+                                <dd>
+                                    <select name="year-date" id="year-date">
+                                        <option value="" disabled selected>Year</option>
+                                        <option>2011</option>
+                                        <option>2012</option>
+                                        <option>2013</option>
+                                    </select>
+                                    <span class="up-arrow year-arrow"></span>
+                                    <span class="down-arrow year-arrow"></span>
+                                </dd>
+                            </dl>
+                            <dl class="comments">
+                                <dt><label for="comments">Description</label></dt>
+                                <dd><textarea name="comments" id="comments" placeholder="Description"></textarea></dd>
+                            </dl>
+                            <div class="controls">
+                                <input type="submit" value="Save">
+                                <input type="submit" value="Mark As Complete">
+                            </div>
+                        </fieldset>
                     </form>
-                </li>
-                <li class="unchecked">
-                    <label>Item6</label>
-                      <form action="destory" method="post" class="delete">
-                        <button type="submit"></button>
-                    </form>
-                </li>
-                <li class="unchecked">
-                    <label>Item7</label>
-                      <form action="destory" method="post" class="delete">
-                        <button type="submit"></button>
-                    </form>
-                </li>
-                <li class="unchecked">
-                    <label>Item8</label>
-                      <form action="destory" method="post" class="delete">
-                        <button type="submit"></button>
-                    </form>
-                </li>
-                <li class="unchecked">
-                    <label>Item9</label>
-                      <form action="destory" method="post" class="delete">
-                        <button type="submit"></button>
-                    </form>
-                </li>
-            </ol>
-        </section>
+                </div>
+            </section>
         </main>
     </body>
 </html>

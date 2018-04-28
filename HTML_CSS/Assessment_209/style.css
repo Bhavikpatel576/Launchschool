@@ -6,6 +6,11 @@ html, body, nav, main {
     margin: 0;
 }
 
+html, body, nav, main * {
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
 body {
     display: flex;
     flex-direction: row;
@@ -183,7 +188,7 @@ main .heading h1 {
 }
 main section[id="todo-list"] {
     padding-top: 45px;
-    padding-right: 20px;
+    /* padding-right: 20px; */
 }
 
 main #todo-list p {
@@ -195,10 +200,11 @@ main #todo-list img {
 }
 
 main #todo-list a{
+    font-size: 16px;
+    font-weight:100;
     text-decoration: none;
     color: #148fd5;
 }
-
 
 section[id="todo-list"] li:first-child {
     border-top: 1px solid #e7e7e7;
@@ -209,6 +215,10 @@ section[id="todo-list"] li{
     border-bottom: 1px solid #e7e7e7;
 }
 
+section[id="todo-list"] li:last-child {
+    border-bottom: none;
+}
+
 section li input {
     flex: 0;
 }
@@ -216,6 +226,7 @@ section li input {
 section li > label {
     flex: 1;
     padding-left: 30px;
+    font-weight: 100;
 }
 
 section time {
@@ -280,7 +291,7 @@ dd input {
 }
 
 .title dt {
-    padding-right: 80px;
+    padding-right: 76px;
 }
 
 .title dd input{
@@ -319,8 +330,8 @@ dd input {
 }
 
 .date > dt:first-child {
-    width: 70px;
-    margin-right: 41px;
+    width: 75px;
+    margin-right: 37px;
 }
 
 .date dd + dd{
@@ -328,7 +339,7 @@ dd input {
 }
 
 form > fieldset *{
-    font-size:16px;
+    font-size:15px;
     box-sizing: border-box;
 }
 
@@ -367,7 +378,7 @@ dl.date > dt{
 }
 
 .comments dt {
-    padding-right: 30px;
+    padding-right: 21px;
 }
 
 .comments textarea{
@@ -397,17 +408,32 @@ form input[type="submit"] {
   font-size: 18px;
 }
 
-input[type=checkbox]:checked ~ #modal-container {
+/* input[type=checkbox]:checked ~ #modal-container {
     display: block;
     position: absolute;
     top: 107px;
     left: 440px;
     right: 185px;
     z-index: 2;
+} */
+
+input[type=checkbox]:checked ~ #modal-container {
+    display: flex;
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;;
+    top: 107px;
+    /* left: 440px;
+    right: 185px; */
+    left: 0px;
+    right: 0px;
+    z-index: 2;
 }
 
 #modal-container {
     display: none;
+    width:575px;
+    height:400px;
 }
 
 input[type=checkbox]:checked ~ #modal-container:before {
